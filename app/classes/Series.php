@@ -20,7 +20,23 @@ class Series
 
     public function makeSeries()
     {
+        if($this->startingNumber>$this->endingNumber)
+        { return $this->btosSeries(); }
+        else
+        {
+            return $this->stobSeries();
+        }
+    }
+
+    protected function stobSeries(){
         for ($this->i = $this->startingNumber; $this->i <= $this->endingNumber; $this->i++)
+        {
+            $this->result.= $this->i.' ';
+        }
+        return $this->result;
+    }
+    protected function btosSeries(){
+        for ($this->i = $this->startingNumber; $this->i >= $this->endingNumber; $this->i--)
         {
             $this->result.= $this->i.' ';
         }
