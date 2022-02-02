@@ -41,12 +41,22 @@
                                         <input type="number" class="form-control" name="ending_number"/>
                                     </div>
                                 </div>
+
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-3">Odd / even</label>
+                                    <div class="col-md-9">
+                                        <label><input type="radio"  name="odd_even" value="odd"/> ODD </label>
+                                        <label><input type="radio"  name="odd_even"         value="even"/> EVEN </label>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label">Result</label>
                                     <div class="col-md-9">
                                         <textarea type="number" class="form-control" name=""><?php echo isset($result)?$result:' '?></textarea>
                                     </div>
                                 </div>
+
+
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9">
