@@ -28,7 +28,7 @@
                     <div class="card">
                         <div class="card-header">My Series</div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form action="action.php" method="post">
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label">Starting Number</label>
                                     <div class="col-md-9">
@@ -36,15 +36,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Starting Number</label>
+                                    <label class="col-md-3 col-form-label">Ending Number</label>
                                     <div class="col-md-9">
-                                        <input type="number" class="form-control" name="starting_number"/>
+                                        <input type="number" class="form-control" name="ending_number"/>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Starting Number</label>
+                                    <label class="col-md-3 col-form-label">Result</label>
                                     <div class="col-md-9">
-                                        <input type="number" class="form-control" name="starting_number"/>
+                                        <textarea type="number" class="form-control" name=""><?php echo isset($result)?$result:' '?></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input type="submit" class="btn btn-outline-success" name="btn" value="Submit"/>
                                     </div>
                                 </div>
                             </form>
