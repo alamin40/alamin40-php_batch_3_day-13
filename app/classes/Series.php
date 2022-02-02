@@ -28,7 +28,20 @@ class Series
     {
         if($this->startingNumber>$this->endingNumber)
         {
-            return $this->btosSeries();
+            {
+                if ($this->oddEven == 'odd')
+                {
+                    return $this->btosOddSeries();
+                }
+                else if($this->oddEven == 'even')
+                {
+                    return $this->btosEvenSeries();
+                }
+                else{
+                    return $this->btosSeries();
+                }
+
+            }
         }
         else
         {
@@ -75,6 +88,26 @@ class Series
     }
     protected function stobEvenSeries(){
         for ($this->i = $this->startingNumber; $this->i <= $this->endingNumber; $this->i++)
+        {
+            if($this->i % 2 == 0){
+                $this->result.= $this->i.' ';
+            }
+        }
+        return $this->result;
+    }
+
+    protected function btosOddSeries(){
+        for ($this->i = $this->startingNumber; $this->i >= $this->endingNumber; $this->i--)
+        {
+            if($this->i % 2 != 0){
+                $this->result.= $this->i.' ';
+            }
+
+        }
+        return $this->result;
+    }
+    protected function btosEvenSeries(){
+        for ($this->i = $this->startingNumber; $this->i >= $this->endingNumber; $this->i--)
         {
             if($this->i % 2 == 0){
                 $this->result.= $this->i.' ';
